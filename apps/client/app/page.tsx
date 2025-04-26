@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Landing() {
   return (
-    <div className='font-IBM-plex-mono-regular text-lg'>Landing Page hai ye</div>
+    <div className='min-h-screen bg-neutral-100 flex flex-col items-center justify-center'>
+      Landing Page
+    </div>
   )
 }
