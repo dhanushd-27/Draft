@@ -32,7 +32,7 @@ jobs:
         with:
           host: 20.244.25.241
           username: azureuser
-          password: ${{ secrets.ACTION_SECRET }}
+          key: ${{ secrets.ACTION_SECRET }}
           port: 22
           script: |
            whoami 
