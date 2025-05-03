@@ -6,6 +6,12 @@ on:
       - main
       - feat/*
       - fix/*
+      
+  push:
+    branches:
+      - main
+      - feat/*
+      - fix/*
 
 jobs:
   lint-and-test:
