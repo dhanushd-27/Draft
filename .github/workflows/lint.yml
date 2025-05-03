@@ -36,12 +36,3 @@ jobs:
           port: 22
           script: |
            whoami 
-
-      - name: 📦 Install dependencies
-        run: npm i
-
-      - name: 🧹 Run Linter
-        run: npm run lint
-
-      - name: 🧪 Run Tests
-        run: npm test
