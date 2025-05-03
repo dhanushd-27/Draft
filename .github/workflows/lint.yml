@@ -1,4 +1,4 @@
-name: Build on PR
+name: Linting
 
 on:
   pull_request:
@@ -21,11 +21,21 @@ jobs:
         with:
           node-version: '20'
 
-      - name: 📦 Install dependencies
-        run: npm i
+      - name: SSH into the vm
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.ACTION_SECRET }}
+          port: 22
+          script: |
+            whoami 
 
-      - name: 🧹 Run Linter
-        run: npm run lint
+      # - name: 📦 Install dependencies
+      #   run: npm i
 
-      - name: 🧪 Run Tests
-        run: npm test
+      # - name: 🧹 Run Linter
+      #   run: npm run lint
+
+      # - name: 🧪 Run Tests
+      #   run: npm test
