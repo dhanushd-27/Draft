@@ -28,7 +28,7 @@ jobs:
           node-version: '20'
 
       - name: SSH into the vm
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@master
         with:
           host: 20.244.25.241
           username: azureuser
