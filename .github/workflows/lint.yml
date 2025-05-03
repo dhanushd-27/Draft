@@ -28,10 +28,10 @@ jobs:
           node-version: '20'
 
       - name: SSH into the vm
-        uses: appleboy/ssh-action@v1.2.0
+        uses: appleboy/ssh-action@v1.8.0
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
+          host: 20.244.25.241
+          username: azureuser
           password: ${{ secrets.ACTION_SECRET }}
           port: 22
           script: |
